@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# To disable this cd hook and prevent potential slowdowns, set GVM_DISABLE_CD_HOOK to a non-empty string.
+[ -n "$GVM_DISABLE_CD_HOOK" ] && return
+
 # Override the cd() function to implement auto-switching of go version and
 # pkgset when changing into a directory.
 
